@@ -45,7 +45,8 @@ Vagrant::Config.run do |config|
         }
       })
   end
-
-  config.vm.provision :shell, :inline => "sudo apt-get install -y sendmail"
+  
+  # Install sendmail. Seems to be causing a problem with sendmail, restarting the VM fixes it.
+  # config.vm.provision :shell, :inline => "sudo apt-get install -y sendmail"
 
 end
