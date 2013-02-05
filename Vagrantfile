@@ -49,4 +49,7 @@ Vagrant::Config.run do |config|
   # Install sendmail. Seems to be causing a problem with sendmail, restarting the VM fixes it.
   # config.vm.provision :shell, :inline => "sudo apt-get install -y sendmail"
 
+  # Forward ssh keys. Don't forget to run ssh-add on the host
+  config.ssh.forward_agent = true
+
 end
